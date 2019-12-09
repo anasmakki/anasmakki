@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<style>
+
+p{
+color:white;
+position:absolute;
+right: 20px;
+bottom: 20px;
+}
+
+  #header{
+  color:white;
+  font-family:footlight mt light;
+  text-align:center;
+  font-size: 20px;
+  }
+  #bottom{
+  color:white;
+  }
+
+
+
+.button{
+background-color: #4CAF50;
+border: none;
+padding: 15px 32px;
+text-align: center;
+text-decoration:none;
+display:inline;
+font-size: 16px;
+}
+
+</style>
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+</head>
+
+
+
+<body bgcolor="#767882">
+    
+<div id = 'header'>
+<h1>Welcome to Dar-E-Arqam School System(Faisalabad Campus)</h1>
+</div><br><br>
+
+<div id = 'bottom'>
+<center><h1>Are You ?</h1>
+    </center>
+
+
+
+    <div class="form-submit">
+                           <center><a href="/student"> <input type="submit" value="Student" class="submit" id="reset" /></a> <br><br>
+                               <a href="/teacher">  <input type="submit" value="Teacher" class="submit"  id="submit" /></a></center>
+                        </div>
+
+
+
+    </div>
+
+
+
+ <!-- JS -->
+    <script src="{{url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+
+    </div>
+
+<footer><p>Application powered by Anas_Makki</p></footer>
+
+</body>
+
+
+
+</html>
