@@ -101,5 +101,8 @@ def student():
         return ("<h1>Data has been saved in database successfully</h1>")
 
     return render_template('student.html')
+
+
+
 if __name__ == '__main__':
     app.run()
