@@ -117,11 +117,6 @@ def sdb():
     return render_template('sdb.html', myUsers=myUsers)
 
 
-<<<<<<< HEAD
 if __name__=='__main__':
     app.run(debug=True)
-=======
 
-if __name__ == '__main__':
-    app.run()
->>>>>>> 61cfbd022a4545bdffd6847732e96f2b158f3b63
