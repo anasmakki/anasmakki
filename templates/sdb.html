@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anas Makki</title>
+</head>
+<body>
+
+<center><h1>Student's Database</h1></center>
+
+<center>
+
+<table border="1">
+
+    <thead>
+
+    <tr>
+
+        <th>ID</th>
+        <th>Name</th>
+        <th>Father Name</th>
+        <th>Address</th>
+        <th>Gender</th>
+        <th>State</th>
+        <th>City</th>
+        <th>Date of Birth</th>
+        <th>Pincode</th>
+        <th>Course</th>
+        <th>Email</th>
+
+
+
+    </tr>
+
+
+    </thead>
+
+    {% for user in myUsers %}
+
+    <tr>
+
+        <td>{{user["new_id"]}}</td>
+        <td>{{user["name"]}}</td>
+        <td>{{user["father_name"]}}</td>
+        <td>{{user["address"]}}</td>
+        <td>{{user["gender"]}}</td>
+        <td>{{user["state"]}}</td>
+        <td>{{user["city"]}}</td>
+        <td>{{user["birth_date"]}}</td>
+        <td>{{user["pincode"]}}</td>
+        <td>{{user["course"]}}</td>
+        <td>{{user["email"]}}</td>
+
+
+
+
+
+    </tr>
+
+
+
+    {% endfor %}
+
+
+
+</table>
+
+    </center>
+
+</body>
+</html>

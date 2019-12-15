@@ -1,6 +1,7 @@
 from flask import Flask,render_template,request
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, String, Integer
+
 import os
 
 project_dir = os.path.dirname(os.path.abspath(__file__))
@@ -74,7 +75,8 @@ def teacher():
         db.session.add(entry)
         db.session.commit()
 
-        return ("<h1>Data has been saved in database successfully</h1>")
+        myUsers = Teacher.query.all()
+        return render_template('tdb.html', myUsers=myUsers)
 
     return render_template('teacher.html')
 
@@ -98,9 +100,22 @@ def student():
         db.session.add(std_entry)
         db.session.commit()
 
-        return ("<h1>Data has been saved in database successfully</h1>")
+        myUsers = Student.query.all()
+        return render_template('sdb.html', myUsers=myUsers)
 
     return render_template('student.html')
 
+@app.route('/tdb')
+def tdb():
+    myUsers = Teacher.query.all()
+    return render_template('tdb.html', myUsers=myUsers)
 
-app.run(debug=True)
+
+@app.route('/sdb')
+def sdb():
+    myUsers = Student.query.all()
+    return render_template('sdb.html', myUsers=myUsers)
+
+
+if __name__=='__main__':
+    app.run(debug=True)

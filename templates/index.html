@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anas Makki</title>
+
 <head>
 
 <style>
@@ -34,6 +39,20 @@ display:inline;
 font-size: 16px;
 }
 
+#box{
+        width:300px;
+        height:auto;
+
+        background:grey;
+
+        color:white;
+        position:relative;
+        left:30px;
+        top: 10px;
+        text-align: center;
+}
+
+
 </style>
 
     <!-- Main css -->
@@ -64,7 +83,20 @@ font-size: 16px;
 
     </div>
 
+<div id="box">
+<div style="font-size:20px;">
 
+    To see Teacher's database  <a href="/tdb" target="_blank">click me</a>
+
+</div>
+
+<div style="font-size:20px;">
+
+  To see Student's database  <a href="/sdb" target="_blank">click me</a>
+
+</div>
+
+</div>
 
  <!-- JS -->
     <script src="{{url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
@@ -72,7 +104,8 @@ font-size: 16px;
 
     </div>
 
-<footer><p>Application powered by Anas_Makki</p></footer>
+
+<footer style="font-size:20px;"><p>Application powered by Anas_Makki</p></footer>
 
 </body>
 
